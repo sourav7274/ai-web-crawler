@@ -1,0 +1,39 @@
+{
+  "name": "ai-web-crawler",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:ui": "playwright test",
+    "test:live": "node --env-file=.env.local node_modules/vitest/vitest.mjs run --config vitest.live.config.ts",
+    "test:scrape": "vitest run --config vitest.live.config.ts -t \"extracts real HTML\""
+  },
+  "dependencies": {
+    "@google/genai": "2.28.0",
+    "cheerio": "1.2.0",
+    "ipaddr.js": "2.5.0",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.0",
+    "typescript": "6.0.3",
+    "vitest": "5.0.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "type": "module"
+}
